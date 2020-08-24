@@ -62,6 +62,13 @@ podns can be used as a kubectl plugin and invoked with `kubectl podns ...args`. 
 $ cp -iv podns.sh /usr/local/bin/kubectl-podns
 ```
 
+### multiple pods (beta)
+Experimental support for running remote command in multiple pod ns.
+
+```bash
+$ go run podns.go remoteCmd pod [pod...] [-h help -u remoteUser]
+```
+
 # todos
 - [ ] if $1 is --help print usage and exit
 - [x] validate output
@@ -72,4 +79,4 @@ $ cp -iv podns.sh /usr/local/bin/kubectl-podns
 - [x] arg cmd
 - [x] echo to stderr so pipes work
 - [x] add strace example
-- [ ] allow multiple pids or dc
+- [x] allow multiple pids or dc
